@@ -1,6 +1,14 @@
 # List all availble disk
 fdisk -l
+
 # Create a volume from disk
 fdisk /dev/sdb
+
 # Format the disk
 mkfs.ext4 /dev/sdb1
+
+# Mount created volume to directory
+mount /dev/sdb1 /var/lib/docker
+
+# Append line into /etc/fstab
+/dev/sdb1 /mnt/1 ext4 defaults 0 0
