@@ -1,0 +1,6 @@
+# List all availble disk
+fdisk -l
+# Create a volume from disk
+fdisk /dev/sdb
+# Format the disk
+mkfs.ext4 /dev/sdb1
