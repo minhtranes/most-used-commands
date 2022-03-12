@@ -1,1 +1,3 @@
 gpg -c sample.text
+
+gpg -d sample.text.gpg
