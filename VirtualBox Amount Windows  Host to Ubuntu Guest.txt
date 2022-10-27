@@ -1,0 +1,12 @@
+// On guest machine (Ubuntu), create a mount point example /apps
+mkdir /apps
+
+// Grant owner for user
+chown -R minhtran:users /apps
+
+// Install Virtual Box utils. Refer to https://askubuntu.com/a/1170291/1558582
+apt-get install virtualbox-guest-utils
+
+// Shutdown guest machine (Ubuntu)
+// On host machine (Windows), Use VBoxManage to create share folder. Example C:\\apps 
+VBoxManage sharedfolder add "k8sdev01" --name apps --automount --hostpath "C:\apps" --auto-mount-point=/apps

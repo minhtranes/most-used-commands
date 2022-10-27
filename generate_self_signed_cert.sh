@@ -1,0 +1,1 @@
+openssl req -newkey rsa:4096 -nodes -keyout key.pem -x509 -days 365 -out cert.pem -subj "//SKIP=skip/C=VN/ST=HCM/L=HCM/O=Swiss Post Soltions/OU=Manufacturing/CN=localhost"
