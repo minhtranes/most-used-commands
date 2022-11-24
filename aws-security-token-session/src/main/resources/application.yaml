@@ -1,0 +1,7 @@
+credential:
+    read-default-filename: credential.json
+    write-default-profile: mfa
+mappings:
+    AccessKeyId: aws_access_key_id
+    SecretAccessKey: aws_secret_access_key
+    SessionToken: aws_session_token
