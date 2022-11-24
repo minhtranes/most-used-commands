@@ -8,4 +8,10 @@ From any location, trigger the following batch script from a Command Prompt
 ```
 obtain_codeartifact_token.bat
 ```
+The script prompt you for entering the MFA token. Just enter the OTP and hit enter
+
+```
+Enter MFA Token: 
+```
+
 After execution, it shows you the message of setting env variable ```CODEARTIFACT_AUTH_TOKEN``` successfully. Then, you can go ahead and use the token within your Maven ```setting.xml```
