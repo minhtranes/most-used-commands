@@ -1,0 +1,1 @@
+bin\windows\kafka-topics.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --list
