@@ -1,0 +1,2 @@
+iptables -A INPUT -p tcp –destination-port 9093 -j DROP
+iptables -A INPUT -p tcp -m tcp -dport 9093 -j ACCEPT

@@ -1,0 +1,1 @@
+$[?(@.checkOutDate>='2023-03-01')].items[?(@.service=='TOUR')]

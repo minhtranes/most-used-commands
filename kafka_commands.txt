@@ -1,1 +1,18 @@
+TOPIC:
 bin\windows\kafka-topics.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --list
+
+bin\windows\kafka-topics.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --describe --topic __job-instances
+
+bin\windows\kafka-topics.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --describe --topic __job-instances
+
+CONFIG:
+bin\windows\kafka-configs.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --entity-type topics --entity-name __job-instances --describe
+
+bin\windows\kafka-configs.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --entity-type brokers --entity-default --describe
+
+
+CONSUMER GROUPS
+Validate Group
+bin\windows\kafka-consumer-groups.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --describe --group 
+Delete Group
+bin\windows\kafka-consumer-groups.bat --bootstrap-server kafka-ssl-service-nodeport.tk-intodigital.svc.cluster.local:30093 --command-config ..\rancher_id_tk.properties --delete --group 
