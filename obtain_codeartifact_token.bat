@@ -28,10 +28,14 @@ java -jar %JAR_FILE% %TEMP_CREDENTIAL_JSON%
 @REM )
 
 FOR /F "tokens=* USEBACKQ" %%F IN (`aws codeartifact get-authorization-token --domain cdipp --domain-owner 253032955724 --region eu-central-1 --query authorizationToken --output text --profile mfa`) DO (
-SET CODEARTIFACT_AUTH_TOKEN=%%F
+SET TMP_CODEARTIFACT_AUTH_TOKEN "%%F"
 )
+
+setx CODEARTIFACT_AUTH_TOKEN %TMP_CODEARTIFACT_AUTH_TOKEN%
+
 echo -----------------------
 ECHO %CODEARTIFACT_AUTH_TOKEN%
 echo -----------------------
 echo ``
+
 echo Set env variable CODEARTIFACT_AUTH_TOKEN successfully
